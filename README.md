@@ -18,6 +18,15 @@ echo 'source ~/.dotfiles/lib/zsh-autoswitch-nvm/autoswitch_nvm.plugin.zsh' >> ~/
 
 I'm not currently aware of how to link this package to any package manager, so I don't know if you can use them to install it.
 
+## Updating
+
+For the time being, the best way to update is to `cd` into the package and `pull` the latest version:
+
+```bash
+cd ~/.dotfiles/lib/zsh-autoswitch-nvm
+git pull origin master
+```
+
 ## Deactivating
 
 Set the `DISABLE_AUTOSWITCH_NVM` variable to temporarily disable version switching when loading a new terminal window.
