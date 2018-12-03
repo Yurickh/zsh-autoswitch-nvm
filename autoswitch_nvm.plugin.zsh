@@ -11,7 +11,7 @@ function load_nvmrc() {
 
       if [ $? != 0 ]; then
         available=$(semver -r $range $(nvm ls-remote --no-colors | grep -oE '.*?v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+' | xargs ) | tail -n 1)
-        echo "Couldn't install version $version, downloading version $available"
+        echo "Couldn't find local version in range $range, downloading version $available"
         nvm install $available
 
         if [ $? != 0 ]; then
