@@ -20,4 +20,4 @@ I'm not currently aware of how to link this package to any package manager, so I
 
 ## Deactivating
 
-Set the `DISABLE_AUTOSWITCH_VENV` variable to temporarilly disable version switching when loading a new terminal window.
+Set the `DISABLE_AUTOSWITCH_NVM` variable to temporarily disable version switching when loading a new terminal window.

@@ -25,7 +25,7 @@ function load_nvmrc() {
   fi
 }
 
-if [[ -z "$DISABLE_AUTOSWITCH_VENV" ]]; then
+if [[ -z "$DISABLE_AUTOSWITCH_NVM" ]]; then
     autoload -Uz add-zsh-hook
     add-zsh-hook -D chpwd load_nvmrc
     add-zsh-hook chpwd load_nvmrc
