@@ -13,7 +13,7 @@ By hand
 
 ```bash
 git clone https://github.com/Yurickh/zsh-autoswitch-nvm ~/.dotfiles/lib/zsh-autoswitch-nvm
-echo 'source ~/.dotfiles/lib/zsh-autoswitch-nvm' >> ~/.zshrc
+echo 'source ~/.dotfiles/lib/zsh-autoswitch-nvm/autoswitch_nvm.plugin.zsh' >> ~/.zshrc
 ```
 
 I'm not currently aware of how to link this package to any package manager, so I don't know if you can use them to install it.
