@@ -5,6 +5,7 @@ function load_nvmrc() {
 
     if [ $range = "none" ]; then
       echo "No node version specified in package.json."
+      nvm use default
     else
       version=$(semver -r $range $(nvm ls --no-colors | grep -v " ->" | xargs | tr -d '*\->') | tail -n 1)
       nvm use $version > /dev/null 2>&1
