@@ -22,6 +22,7 @@ function load_nvmrc() {
     echo "No node version configured in workspace."
     nvm use default
   else
+    echo "Found range $range."
     version=$(semver -r $range $(nvm ls --no-colors | grep -v " ->" | xargs | tr -d '*\->') | tail -n 1)
     nvm use $version > /dev/null 2>&1
 
@@ -32,7 +33,11 @@ function load_nvmrc() {
 
       if [ $? != 0 ]; then
         echo "Couldn't install version $available"
+      else
+        echo "Using version $available"
       fi
+    else
+      echo "Using version $version"
     fi
   fi
 }
